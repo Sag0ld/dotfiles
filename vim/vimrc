@@ -53,7 +53,7 @@ execute pathogen#infect()
 " Solarized
 " https://github.com/frankier/neovim-colors-solarized-truecolor-only/
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 " CtrP
