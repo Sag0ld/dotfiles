@@ -1,0 +1,15 @@
+# Create aliases.local if doesn't exist
+root=$HOME
+
+# Source files
+source $root/.exports     # Various exports
+source $root/.aliases     # User-defined aliases
+source $root/.bash_colors # Color codes
+source $root/.bash_prompt # Bash prompt
+
+# Tab completion
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  [ -f "$(brew --prefix)/etc/bash_completion" ] && source $(brew --prefix)/etc/bash_completion
+fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

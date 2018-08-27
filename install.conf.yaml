@@ -1,0 +1,32 @@
+- defaults:
+    link:
+      relink: true
+      create: true
+
+- clean: ['~']
+
+- link:
+
+    # Vim
+    ~/.vim: 'vim'
+    ~/.vimrc: 'vim/vimrc'
+
+    # Neovim
+    ~/.config/nvim:
+      force: true
+      path: 'vim'
+    ~/.config/nvim/init.vim: 'vim/vimrc'
+
+    # Bash
+    ~/.aliases: 'bash/aliases'
+    ~/.bash_colors: 'bash/bash_colors'
+    ~/.bash_prompt: 'bash/bash_prompt'
+    ~/.exports: 'bash/exports'
+    ~/.bash_profile: 'bash/bash_profile'
+    ~/.bashrc: 'bash/bashrc'
+
+    # Git
+    # ~/.gitconfig: 'git/gitconfig'
+
+- shell:
+    - ['git submodule update --init --recursive', 'Installing submodules']
