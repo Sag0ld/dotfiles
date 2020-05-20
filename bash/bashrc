@@ -13,3 +13,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Initialize tmux if on OSX
+[ -z "$TMUX" ] && [[ "$OSTYPE" == "darwin"* ]] && exec tmux attach
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

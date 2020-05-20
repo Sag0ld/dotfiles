@@ -25,6 +25,9 @@
     ~/.bash_profile: 'bash/bash_profile'
     ~/.bashrc: 'bash/bashrc'
 
+    # Tmux
+    ~/.tmux.conf: 'tmux/tmux.conf'
+
     # Git
     ~/.gitconfig: 'git/gitconfig'
 
